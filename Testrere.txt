@@ -1,0 +1,55 @@
+import java.io.IOException;
+
+public class Test015
+{
+	public static void main(String[] args) throws IOException
+	{	
+
+/*
+		System.out.print("한 문자 입력 : ");
+		strA = System.in.read();
+	
+
+		System.out.print("한 자리 정수 입력 : ");
+		intB = System.in.read();
+
+		System.out.println(">> 입력한 문자 : strA");
+		System.out.println(">> 입력한 정수 : intB");
+
+*/
+
+
+// ○ 주요 변수 선언
+
+		char ch;  //-- 입력받은 문자를 담을 변수
+		int n;    //-- 입력받은 정수를 담을 변수
+
+		System.out.print("한 문자 입력 : ");  //G-->7
+		
+
+		// 사용자 입력값을 문자형으로 변환한 후 변수 ch에 담아내기
+		// ch=71; 바로 ch에 담아내지지 않겠지? 자동형변환 규칙에도 맞지 않아! 
+		// 그래서 명시적 형변환 필요!
+		// 한 문자 입력 : 'G' + 엔터 이 엔터!!에서 개행이 이뤄짐
+		// 엔터키 모양은 \n + \r이 합쳐져있는 모양. ← + ↓
+
+// ○ 연산 및 처리
+		ch = (char)System.in.read();
+		System.in.skip(2);
+		// 사용자에게 안내 메세지 출력
+		System.out.print("한 자리 정수 입력 : ");
+		
+		
+		// 사용자 입력값을 변수 n에 담아내기
+		n = System.in.read();      //--> 여기서도 아스키 코드로 출력이 되겠지?
+									// 아스키코드 숫자 - 48 빼면 되렉싲..
+		n -= 48;                  // 복합 대입 연산자 사용해서 빼주기
+
+
+// ○ 결과 출력
+		
+		System.out.println();
+		System.out.println(">> 입력한 문자 : " + ch);
+		System.out.println(">> 입력한 정수 : " + n);
+		System.out.println();
+		
